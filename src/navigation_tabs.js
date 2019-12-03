@@ -28,6 +28,10 @@ const renderTabs = () => {
   var location = document.createElement("DIV");
   location.classList.add("tab");
   location.setAttribute("ID", "location");
+  location.addEventListener("click", function() {
+    clickTab("location");
+    removeMiddle();
+  });
   var location_image = document.createElement("IMG");
   location_image.setAttribute("src", "img/location.png");
   location_image.classList.add("icon");
@@ -42,6 +46,10 @@ const renderTabs = () => {
   var accom = document.createElement("DIV");
   accom.classList.add("tab");
   accom.setAttribute("ID", "accom");
+  accom.addEventListener("click", function() {
+    clickTab("accom");
+    removeMiddle();
+  });
   var accom_image = document.createElement("IMG");
   accom_image.setAttribute("src", "img/home.png");
   accom_image.classList.add("icon");
@@ -55,6 +63,10 @@ const renderTabs = () => {
 
   var photo = document.createElement("DIV");
   photo.classList.add("tab");
+  photo.addEventListener("click", function() {
+    clickTab("photo");
+    removeMiddle();
+  });
   photo.setAttribute("ID", "photo");
   var photo_image = document.createElement("IMG");
   photo_image.setAttribute("src", "img/photos.png");
