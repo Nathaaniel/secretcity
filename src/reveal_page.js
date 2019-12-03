@@ -1,14 +1,17 @@
-const renderMainPage = () => {
+const renderMiddle = () => {
   var container = document.getElementById("content");
+  var middle = document.createElement("DIV");
+  middle.classList.add("middle");
+  container.appendChild(middle);
+};
 
+const renderMainPage = () => {
+  var middle = document.getElementsByClassName("middle")[0]
   document.body.style.backgroundImage = "url('img/backing.png')";
   document.body.style.backgroundSize = "125%";
   document.body.style.backgroundRepeat = "no-repeat";
 
-  var middle = document.createElement("DIV");
-  middle.classList.add("middle");
-
-  var title = document.createElement("h1");
+  var title = document.createElement("DIV");
   title.classList.add("title");
   var titleText = document.createTextNode("Tap to reveal destination");
 
@@ -23,14 +26,13 @@ const renderMainPage = () => {
 
   var reveal = document.createElement("DIV");
   reveal.classList.add("reveal");
-  var revealText = document.createTextNode("CITYCITY!");
+  var revealText = document.createTextNode("BUDAPEST!");
 
   title.appendChild(titleText);
   reveal.appendChild(revealText);
   middle.appendChild(title);
   middle.appendChild(image);
   middle.appendChild(reveal);
-  container.appendChild(middle);
 };
 
 const deblur = () => {
@@ -44,4 +46,4 @@ const deblur = () => {
   document.getElementsByClassName("reveal")[0].style.transitionDuration = "1s";
 };
 
-export { renderMainPage, deblur };
+export { renderMainPage, deblur, renderMiddle };
