@@ -1,0 +1,37 @@
+h1 {
+  text-align: center;
+  font-size: 2em;
+  height: 15vh;
+}
+
+/* .title {
+  height: 5vh;
+} */
+
+.middle {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.city {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 45%;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(221, 221, 221);
+  width: 50%;
+  height: 20vh;
+  object-fit: cover;
+  margin: auto;
+  align-self: auto;
+  filter: blur(8px) opacity(50%);
+}
+
+.reveal {
+  padding-top: 10%;
+  text-align: center;
+  font-size: 10vw;
+  display: none;
+}
