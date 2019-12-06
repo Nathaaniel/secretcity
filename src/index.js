@@ -4,4 +4,3 @@ renderMiddle();
 renderTabs();
 renderMainPage();
 clickTab("puzzle");
-

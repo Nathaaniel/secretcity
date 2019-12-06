@@ -26,7 +26,7 @@ const renderMainPage = () => {
 
   var reveal = document.createElement("DIV");
   reveal.classList.add("reveal");
-  var revealText = document.createTextNode("BUDAPEST!");
+  var revealText = document.createTextNode("BUDAPEST");
 
   title.appendChild(titleText);
   reveal.appendChild(revealText);
@@ -38,12 +38,11 @@ const renderMainPage = () => {
 const deblur = () => {
   document.getElementById("city").style.filter = "none";
   document.getElementById("city").style.width = "100%";
-  document.getElementById("city").style.height = "40vh";
+  document.getElementById("city").style.height = "48vh";
   document.getElementById("city").style.transitionDuration = "1s";
-  document.getElementsByClassName("reveal")[0].style.display = "block";
-  document.getElementsByClassName("reveal")[0].style.transitionDuration = "1s";
-  document.getElementsByClassName("title")[0].style.fontSize = "0px";
-  document.getElementsByClassName("reveal")[0].style.transitionDuration = "1s";
+  document.getElementsByClassName("reveal")[0].style.opacity = "1";
+  document.getElementsByClassName("reveal")[0].style.transitionDuration = "5s";
+  document.getElementsByClassName("title")[0].style.display = "none";
 };
 
 export { renderMainPage, deblur, renderMiddle };

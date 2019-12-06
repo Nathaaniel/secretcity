@@ -1,4 +1,5 @@
 import { renderMainPage, deblur } from "./reveal_page";
+import { renderAccomPage } from "./accom_page";
 
 const renderTabs = () => {
   var container = document.getElementById("content");
@@ -49,6 +50,7 @@ const renderTabs = () => {
   accom.addEventListener("click", function() {
     clickTab("accom");
     removeMiddle();
+    renderAccomPage();
   });
   var accom_image = document.createElement("IMG");
   accom_image.setAttribute("src", "img/home.png");

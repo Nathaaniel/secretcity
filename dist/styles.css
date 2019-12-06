@@ -1,24 +1,31 @@
 .title {
   text-align: center;
-  font-size: 2em;
-  height: 15vh;
+  font-size: 1.6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(80, 79, 79);
 }
 
-body {margin:0;padding:0}
+body {
+  margin: 0;
+  padding: 0;
+}
 
 #content {
   min-height: 100vh;
   min-width: 100vw;
 }
 
-
-
 .middle {
-  padding-left: 15%;
-  padding-right: 15%;
+  position: relative;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .city {
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -32,13 +39,18 @@ body {margin:0;padding:0}
   margin: auto;
   align-self: auto;
   filter: blur(8px) opacity(50%);
+  margin-top: 15%;
 }
 
 .reveal {
   padding-top: 10%;
   text-align: center;
-  font-size: 10vw;
-  display: none;
+  font-size: 12vw;
+  opacity: 0;
+}
+
+.airimages {
+  width: 100%;
 }
 
 .tabs {
@@ -52,20 +64,18 @@ body {margin:0;padding:0}
   justify-content: center;
 
   background-color: rgba(255, 255, 255, 0.3);
-
 }
 
 .tab {
   display: flex;
   flex-direction: column;
   width: 20%;
-  margin: 2%
+  margin: 2%;
 }
 
 .tab_text {
-font-size: 3.3vw;
-text-align: center;
-
+  font-size: 3.3vw;
+  text-align: center;
 }
 
 .icon {
