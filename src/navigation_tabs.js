@@ -1,6 +1,8 @@
 import { renderMainPage, deblur } from "./reveal_page";
 import { renderAccomPage } from "./accom_page";
 
+
+
 const renderTabs = () => {
   var container = document.getElementById("content");
   var tabs = document.createElement("DIV");

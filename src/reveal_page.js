@@ -6,10 +6,11 @@ const renderMiddle = () => {
 };
 
 const renderMainPage = () => {
-  var middle = document.getElementsByClassName("middle")[0]
+  var middle = document.getElementsByClassName("middle")[0];
   document.body.style.backgroundImage = "url('img/backing.png')";
-  document.body.style.backgroundSize = "125%";
+  document.body.style.backgroundSize = "60vh";
   document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundAttachment = "fixed";
 
   var title = document.createElement("DIV");
   title.classList.add("title");
@@ -39,9 +40,9 @@ const deblur = () => {
   document.getElementById("city").style.filter = "none";
   document.getElementById("city").style.width = "100%";
   document.getElementById("city").style.height = "48vh";
-  document.getElementById("city").style.transitionDuration = "1s";
+  document.getElementById("city").style.transitionDuration = "2.5s";
   document.getElementsByClassName("reveal")[0].style.opacity = "1";
-  document.getElementsByClassName("reveal")[0].style.transitionDuration = "5s";
+  document.getElementsByClassName("reveal")[0].style.transitionDuration = "10s";
   document.getElementsByClassName("title")[0].style.display = "none";
 };
 

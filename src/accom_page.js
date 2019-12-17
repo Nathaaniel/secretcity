@@ -2,6 +2,7 @@ const renderAccomPage = () => {
   var airbnb = "https://www.airbnb.co.uk/rooms/7108208";
 
   var middle = document.getElementsByClassName("middle")[0];
+  var airimg = document.createElement("DIV");
 
   var airb1 = document.createElement("IMG");
   airb1.setAttribute("src", "img/airb1.jpg");
@@ -19,15 +20,99 @@ const renderAccomPage = () => {
   airb4.setAttribute("src", "img/airb4.jpg");
   airb4.classList.add("airimages");
 
-  var left = document.createElement("btn");
-  var right = document.createElement("btn");
+  var left = document.createElement("BUTTON");
+  var right = document.createElement("BUTTON");
+  left.classList.add("leftSlide", "arrow");
+  right.classList.add("rightSlide", "arrow");
+  left.addEventListener("click", function() {
+    plusDivs(-1);
+  });
+  right.addEventListener("click", function() {
+    plusDivs(+1);
+  });
+  var leftText = document.createTextNode("<");
+  var rightText = document.createTextNode(">");
 
-  middle.appendChild(airb1);
-  middle.appendChild(airb2);
-  middle.appendChild(airb3);
-  middle.appendChild(airb4);
-  middle.appendChild(left);
-  middle.appendChild(right);
+  var spanner1 = document.createElement("DIV");
+  spanner1.classList.add("empty");
+  spanner1.addEventListener("click", function() {
+    currentDivs(1);
+  });
+
+  var spanner2 = document.createElement("DIV");
+  spanner2.classList.add("empty");
+  spanner2.addEventListener("click", function() {
+    currentDivs(2);
+  });
+
+  var spanner3 = document.createElement("DIV");
+  spanner3.classList.add("empty");
+  spanner3.addEventListener("click", function() {
+    currentDivs(3);
+  });
+
+  var spanner4 = document.createElement("DIV");
+  spanner4.classList.add("empty");
+  spanner4.addEventListener("click", function() {
+    currentDivs(4);
+  });
+
+  var bottom = document.createElement("DIV");
+  bottom.classList.add("bottom");
+
+  var dots = document.createElement("DIV");
+  dots.classList.add("dots");
+
+  left.appendChild(leftText);
+  right.appendChild(rightText);
+
+  airimg.appendChild(airb1);
+  airimg.appendChild(airb2);
+  airimg.appendChild(airb3);
+  airimg.appendChild(airb4);
+  middle.appendChild(airimg);
+  bottom.appendChild(left);
+
+  dots.appendChild(spanner1);
+  dots.appendChild(spanner2);
+  dots.appendChild(spanner3);
+  dots.appendChild(spanner4);
+  bottom.appendChild(dots);
+  bottom.appendChild(right);
+  airimg.appendChild(bottom);
+
+  var plusDivs = num => {
+    showDivs((slideIndex += num));
+  };
+
+  var currentDivs = num => {
+    showDivs((slideIndex = num));
+  };
+
+  const showDivs = num => {
+    var i;
+    var x = document.getElementsByClassName("airimages");
+    var dotters = document.getElementsByClassName("empty");
+    if (num > x.length) {
+      slideIndex = 1;
+    }
+    if (num < 1) {
+      slideIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+
+    for (i = 0; i < dotters.length; i++) {
+      dotters[i].classList.remove("filled");
+    }
+
+    dotters[slideIndex - 1].className += " filled";
+  };
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
 };
 
 export { renderAccomPage };
