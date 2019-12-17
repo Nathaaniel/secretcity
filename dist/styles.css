@@ -130,13 +130,13 @@ body {
 }
 
 .thingtext {
-  width: 60%;
-  background-color: rgba(105, 104, 96, 0.185);
+  width: 100%;
+  background-color: rgba(105, 104, 96, 0.075);
   border-radius: 2vw;
   text-align: center;
   font-size: 6vw;
   margin: auto;
-  margin-top: 4vw;
+  margin-top: 1vw;
 }
 
 .page_title {
