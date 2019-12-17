@@ -1,5 +1,6 @@
 import { renderMainPage, deblur } from "./reveal_page";
 import { renderAccomPage } from "./accom_page";
+import { renderThingsPage } from "./things_page";
 
 
 
@@ -70,6 +71,7 @@ const renderTabs = () => {
   photo.addEventListener("click", function() {
     clickTab("photo");
     removeMiddle();
+    renderThingsPage();
   });
   photo.setAttribute("ID", "photo");
   var photo_image = document.createElement("IMG");
