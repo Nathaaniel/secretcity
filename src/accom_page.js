@@ -1,7 +1,13 @@
 const renderAccomPage = () => {
-  var airbnb = "https://www.airbnb.co.uk/rooms/7108208";
-
   var middle = document.getElementsByClassName("middle")[0];
+
+  var page_title = document.createElement("DIV");
+  page_title.classList.add("page_title")
+  var page_title_text = document.createTextNode("Elizabeth Boulevard Apartment");
+  page_title.appendChild(page_title_text);
+  page_title.setAttribute("href", "https://www.airbnb.co.uk/rooms/7108208");
+  middle.appendChild(page_title)
+
   var airimg = document.createElement("DIV");
 
   var airb1 = document.createElement("IMG");

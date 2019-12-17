@@ -1,5 +1,13 @@
 const renderThingsPage = () => {
   var middle = document.getElementsByClassName("middle")[0];
+
+  var page_title = document.createElement("DIV");
+  page_title.classList.add("page_title")
+  var page_title_text = document.createTextNode("Things to do in Budapest");
+  page_title.appendChild(page_title_text);
+  
+  middle.appendChild(page_title)
+
   var thingmages = document.createElement("DIV");
   var thingtext = document.createElement("DIV");
 

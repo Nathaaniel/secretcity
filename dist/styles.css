@@ -52,7 +52,7 @@ body {
 
 .airimages {
   width: 100%;
-  padding-top: 20vw;
+  padding-top: 5vw;
 }
 
 .tabs {
@@ -126,15 +126,27 @@ body {
 
 .thingmages {
   width: 100%;
-  padding-top: 20vw;
+  padding-top: 5vw;
 }
 
 .thingtext {
   width: 60%;
-  background-color: rgba(129, 123, 88, 0.274);
+  background-color: rgba(105, 104, 96, 0.185);
   border-radius: 2vw;
   text-align: center;
   font-size: 6vw;
   margin: auto;
   margin-top: 4vw;
+}
+
+.page_title {
+  padding-top: 15vw;
+  text-align: center;
+  width: 100%;
+  font-size: 6vw;
+  font-family: "Days One";
+
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
 }
