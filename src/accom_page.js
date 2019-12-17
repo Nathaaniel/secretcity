@@ -2,11 +2,19 @@ const renderAccomPage = () => {
   var middle = document.getElementsByClassName("middle")[0];
 
   var page_title = document.createElement("DIV");
-  page_title.classList.add("page_title")
-  var page_title_text = document.createTextNode("Elizabeth Boulevard Apartment");
-  page_title.appendChild(page_title_text);
-  page_title.setAttribute("href", "https://www.airbnb.co.uk/rooms/7108208");
-  middle.appendChild(page_title)
+
+  var page_title_a = document.createElement("A");
+
+  page_title.classList.add("page_title");
+  var page_title_text = document.createTextNode(
+    "Elizabeth Boulevard Apartment"
+  );
+
+  page_title_a.setAttribute("href", "https://www.airbnb.co.uk/rooms/7108208");
+  page_title_a.setAttribute("target", "_blank");
+  page_title_a.appendChild(page_title_text);
+  page_title.appendChild(page_title_a);
+  middle.appendChild(page_title);
 
   var airimg = document.createElement("DIV");
 
