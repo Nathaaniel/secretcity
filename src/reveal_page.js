@@ -11,6 +11,7 @@ const renderMainPage = () => {
   document.body.style.backgroundSize = "60vh";
   document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.backgroundAttachment = "fixed";
+  document.body.style.left = "0";
 
   var title = document.createElement("DIV");
   title.classList.add("title");

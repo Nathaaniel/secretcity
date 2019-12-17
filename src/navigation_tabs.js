@@ -34,7 +34,7 @@ const renderTabs = () => {
   location.addEventListener("click", function() {
     clickTab("location");
     removeMiddle();
-    renderWherePage();
+    renderWherePage(); 
   });
   var location_image = document.createElement("IMG");
   location_image.setAttribute("src", "img/location.png");

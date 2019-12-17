@@ -17,6 +17,7 @@ const renderAccomPage = () => {
   middle.appendChild(page_title);
 
   var airimg = document.createElement("DIV");
+  airimg.classList.add("airimg")
 
   var airb1 = document.createElement("IMG");
   airb1.setAttribute("src", "img/airb1.jpg");
