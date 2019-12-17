@@ -1,8 +1,7 @@
 import { renderMainPage, deblur } from "./reveal_page";
 import { renderAccomPage } from "./accom_page";
 import { renderThingsPage } from "./things_page";
-
-
+import { renderWherePage } from "./where_page";
 
 const renderTabs = () => {
   var container = document.getElementById("content");
@@ -35,6 +34,7 @@ const renderTabs = () => {
   location.addEventListener("click", function() {
     clickTab("location");
     removeMiddle();
+    renderWherePage();
   });
   var location_image = document.createElement("IMG");
   location_image.setAttribute("src", "img/location.png");
