@@ -15,10 +15,10 @@ const renderWherePage = () => {
   var buda = document.createElement("DIV");
   buda.classList.add("budamap");
   var buda_text1 = document.createTextNode(
-    "Budapest is the capital and the most populous city of Hungary, and the tenth-largest city in the European Union."
+    "Budapest is the capital and the most populous city of Hungary, and the tenth-largest city in the European Union. The city has an estimated population of 1,752,286."
   );
   var buda_text2 = document.createTextNode(
-    "The city has an estimated population of 1,752,286. Hungary borders Slovakia to the north, Ukraine to the northeast, Austria to the northwest, Romania to the east, Serbia to the south, Croatia to the southwest, and Slovenia to the west."
+    "Hungary borders Slovakia to the north, Ukraine to the northeast, Austria to the northwest, Romania to the east, Serbia to the south, Croatia to the southwest, and Slovenia to the west."
   );
 
   var br = document.createElement('br');
